@@ -29,6 +29,11 @@ Detecting Services: Get a list of running services on a live host. Usage:
 ```console
 nmap -sV MACHINE_IP
 ```
+Check for vulns also:
+```console
+nmap -sV -sC --script vuln MACHINE_IP
+nmap -sV -vv --script vuln  MACHINE_IP
+```
 
 ## nikto
 Webserver vuln. disc.
