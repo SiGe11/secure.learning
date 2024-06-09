@@ -94,3 +94,10 @@ Search ExploitDB
 ```console
 searchsploit fuel cms
 ```
+
+## enum4linux
+eg. SMB user name enumeration
+
+```console
+enum4linux -e $IP
+```
