@@ -109,3 +109,10 @@ eg. SMB user name enumeration
 ```console
 enum4linux -e $IP
 ```
+
+## stegcracker
+Steganograpy cracer
+
+ ```console
+stegcracker <file> [<wordlist>]
+```
