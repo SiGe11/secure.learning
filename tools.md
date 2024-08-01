@@ -95,6 +95,14 @@ Search ExploitDB
 searchsploit fuel cms
 ```
 
+## hashcat
+
+MD5 hash cracker
+
+```console
+hashcat -m 0 pash /usr/share/wordlists/rockyou.txt
+```
+
 ## enum4linux
 eg. SMB user name enumeration
 
