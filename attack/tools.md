@@ -105,7 +105,7 @@ hashcat -m 0 pash /usr/share/wordlists/rockyou.txt
 
 ## enum4linux
 eg. SMB user name enumeration
-
+-a all
 ```console
 enum4linux -e $IP
 ```
