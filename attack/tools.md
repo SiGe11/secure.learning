@@ -6,7 +6,7 @@ Site discovery
 gobuster -u http://fakebank.com -w wordlist.txt dir
 ```
 ```console
-gobuster -u http://$IP -w wordlist.txt -x php,sh,txt,cgi,html,js,css,py
+gobuster -u http://$MACHINE_IP -w wordlist.txt -x php,sh,txt,cgi,html,js,css,py
 ```
 
 ## nmap
@@ -15,41 +15,46 @@ nmap -sC -sV -oN nmap/initial $IP
 ```
 Silence discovery:
 ```console
-nmap -sS MACHINE_IP
+nmap -sS $MACHINE_IP
 ```
 Ping Scan: Allows scanning the live hosts in the network without going deeper and checking for ports services etc. Usage:
 ```console
-nmap -sn MACHINE_IP
+nmap -sn $MACHINE_IP
 ```
 Operating System Scan: Allows scanning of the type of OS running on a live host. Usage: 
 ```console
-nmap -O MACHINE_IP
+nmap -O $MACHINE_IP
 ```
 Detecting Services: Get a list of running services on a live host. Usage: 
 ```console
-nmap -sV MACHINE_IP
+nmap -sV $MACHINE_IP
 ```
 Check for vulns also:
 ```console
-nmap -sV -sC --script vuln MACHINE_IP
-nmap -sV -vv --script vuln  MACHINE_IP
+nmap -sV -sC --script vuln $MACHINE_IP
+nmap -sV -vv --script vuln  $MACHINE_IP
+```
+
+In depth search:
+```console
+nmap -A -p- $MACHINE_IP
 ```
 
 ## nikto
 Webserver vuln. disc.
 ```console
-nikto -host $IP:80
+nikto -host $MACHINE_IP:80
 ```
 
 ## hydra
 Bruteforce
 
 ```console
-hydra -l '' -P 3digits.txt -f -v MACHINE_IP http-post-form "/login.php:pin=^PASS^:Access denied" -s 8000
+hydra -l '' -P 3digits.txt -f -v $MACHINE_IP http-post-form "/login.php:pin=^PASS^:Access denied" -s 8000
 ```
 
 ```console
-hydra -l alexander -P /usr/share/wordlists/rockyou.txt ssh://MACHINE_IP -V
+hydra -l alexander -P /usr/share/wordlists/rockyou.txt ssh://$MACHINE_IP -V
 ```
 
 ```console
@@ -62,7 +67,7 @@ Password list generator
 ## cewl
 
 ```console
-cewl -d 2 -m 5 -w passwords.txt http://MACHINE_IP --with-numbers
+cewl -d 2 -m 5 -w passwords.txt http://$MACHINE_IP --with-numbers
 ```
 
 ## nc
