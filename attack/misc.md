@@ -6,3 +6,9 @@ python -c 'import os; os.system("/bin/bash")'
 
 ## Honeypot
 - pentbox
+
+## Reconnaissance
+### Browser add-ons
+- FoxyProxy
+- User-Agent Switcher and Manager
+- Wappalyzer
