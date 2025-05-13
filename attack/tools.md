@@ -35,6 +35,11 @@ nmap -sV -sC --script vuln $MACHINE_IP
 nmap -sV -vv --script vuln  $MACHINE_IP
 ```
 
+Loud, but effectie:
+```console
+nmap -A $MACHINE_IP
+```
+
 In depth search:
 ```console
 nmap -A -p- $MACHINE_IP
@@ -59,6 +64,10 @@ hydra -l alexander -P /usr/share/wordlists/rockyou.txt ssh://$MACHINE_IP -V
 
 ```console
 hydra -l R1ckRul3s -P /usr/share/wordlists/rockyou.txt -f -v 10.10.66.58 http-post-form "/login.php:username=^USER^&password=^PASS^&sub=Login:Invalid username or password." -s 80
+```
+
+```console
+hydra -l username -P /usr/share/wordlists/rockyou.txt $MACHINE_IP ftp
 ```
 
 ## crunch
@@ -120,4 +129,27 @@ Steganograpy cracer
 
  ```console
 stegcracker <file> [<wordlist>]
+```
+
+## binwalk
+Check for hidden data
+
+ ```console
+binwalk <file>
+```
+
+Extract hidden files:
+ ```console
+binwalk -e <file>
+```
+
+## steghide
+Steganograpy data
+
+ ```console
+steghide --info 'filename'
+```
+
+ ```console
+steghide --extract -sf 'filename'
 ```
