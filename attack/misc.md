@@ -12,3 +12,6 @@ python -c 'import os; os.system("/bin/bash")'
 - FoxyProxy
 - User-Agent Switcher and Manager
 - Wappalyzer
+
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+python3 -c 'import os; os.system("/bin/bash")'

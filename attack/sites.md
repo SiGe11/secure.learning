@@ -6,6 +6,8 @@
 - [GTFOBins](https://gtfobins.github.io)
 - [Reverse Shell Cheat Sheet](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 - [Reverse Shell Generator](https://www.revshells.com)
+- [MD5Hashing](https://md5hashing.net)
+- [CrackStation](https://crackstation.net)
 
 
 ## Vulnerability databases
